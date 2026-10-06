@@ -4,27 +4,47 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pokedex </title>
+    <title>Pokédex</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Pokedex </h1>
-    <input type="text" id="campobusca" placeholder="Nome do Numero">
-    <button id="btnBuscar"> Buscar </button>
+    
+    <main class="container min-vh-100 d-flex flex-column align-items-center justify-content-center py-5">
+        <header class="text-center mb-4">
+        <section class="card pokedex-card border-0 shadow-lg rounded-4" aria-label="Busca de Pokémon">
+             <h1 class="img"> 
+                <img src="logo.jpg" alt="pokedex">
+            </h1>
+            <div class="card-body p-4 p-sm-5">
+                <form id="formBusca" class="input-group search-group mb-4">
+                    <label class="visually-hidden" for="campobusca">Nome ou número do Pokémon</label>
+                    <input type="search" id="campobusca" class="form-control"
+                        placeholder="Nome ou número..." autocomplete="off">
+                    <button type="submit" class="btn btn-success px-4 fw-semibold" id="btnBuscar">Buscar</button>
+                </form>
 
-    <div id="resultado"></div>
+                <div id="resultado" class="text-center py-3" aria-live="polite"></div>
 
-   <button id="btnAnterior"> Anterior </button>
-   <button id="btnAleatorio">Aleatorio</button>
-   <button id="btnProximo"> Proximo </button>
+                <div class="d-flex justify-content-between gap-2 mt-4">
+                    <button type="button" class="btn btn-warning border flex-fill" id="btnAnterior">
+                        Anterior
+                    </button>
+                    <button type="button" class="btn btn-outline-danger flex-fill fw-semibold" id="btnAleatorio">
+                        Aleatório
+                    </button>
+                    <button type="button" class="btn btn-warning border flex-fill" id="btnProximo">
+                        Próximo
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
 
-   <script src="script.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
